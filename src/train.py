@@ -66,7 +66,7 @@ class ProjectAgent:
 
     def load(self):
         self.models = joblib.load("XGB_Qmodel_action.joblib")
-        print("loaded, len", len(joblib.load("/workspaces/mva-rl-assignment-Andrei-Barbu/XGB_Qmodel_action.joblib")))
+        print("Models loaded successfully, count:", len(self.models))
 
 
 
