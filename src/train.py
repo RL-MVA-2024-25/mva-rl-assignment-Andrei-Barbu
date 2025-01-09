@@ -7,21 +7,6 @@ import sklearn as sk
 
 from sklearn.exceptions import NotFittedError
 
-import subprocess
-import sys
-
-try:
-    import xgboost
-except ImportError:
-    # If xgboost is not installed, try installing it
-    print("xgboost not found. Installing...")
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "xgboost"])
-    # Reimport after installation
-    import xgboost
-
-# Your script logic goes here
-print("xgboost is successfully imported!")
-
 
 from xgboost import XGBRegressor
 import xgboost as xgb
