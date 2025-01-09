@@ -2,10 +2,13 @@ from gymnasium.wrappers import TimeLimit
 from env_hiv import HIVPatient
 import joblib
 import numpy as np
+
+import sklearn as sk
+
+from sklearn.exceptions import NotFittedError
+
 from xgboost import XGBRegressor
 import xgboost as xgb
-import joblib
-from sklearn.exceptions import NotFittedError
 
 env = TimeLimit(
     env=HIVPatient(domain_randomization=False), max_episode_steps=200
